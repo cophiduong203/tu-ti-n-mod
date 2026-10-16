@@ -1,0 +1,22 @@
+name: Build Fabric mod
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+      - name: Compile remapped Fabric jar
+        run: gradle --no-daemon clean build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hytur-tu-tien-fabric-1.20.1
+          path: build/libs/hytur-tu-tien-1.0.0.jar

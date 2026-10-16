@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "hyturtutien",
+  "version": "${version}",
+  "name": "Hytur Tu Tien - 10 Canh Gioi",
+  "description": "Tu tien 10 canh gioi x 10 tang, tu vi danh quai/thien, dot pha va hao quang rieng. Ho tro modpack HyturCraft Fabric 1.20.1.",
+  "authors": ["Hytur Tu Tien"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["vn.hyturcraft.tutien.TuTienMod"]
+  },
+  "mixins": ["hyturtutien.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
